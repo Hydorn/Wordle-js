@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #bbb;
+    display: flex;
+    flex-direction: column;
+}
+header{
+   flex: 0.1; 
+   border-bottom: 1px solid gray;
+}
+.wordle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.try{
+    display: flex;
+}
+.word{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 4rem;
+    color: #666;
+    width: 6rem;
+    height: 6rem;
+    margin: 1rem;
+    border: solid 2px gray;
+}
+.keyboard-container{
+    border-top: 1px solid gray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.col{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.key{
+    font-size: 1.5rem;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid gray;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    transition: .2s all ease-in;
+    cursor: pointer;
+}
+.key:hover {
+    opacity: 0.8;
+    background-color: gray;
+}
+.intro{
+    width:12rem;
+}
+.green {
+    background-color: green;
+    color: #fff;
+}
+.orange {
+    background-color: orange;
+    color: #fff;
+}
+.checked{
+    background-color: #666;
+    color: #fff;
+}
+.none{
+    pointer-events: none;
+}
