@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script defer src="index.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <h1>WORDLE</h1>
+    </header>
     <section class="wordle">
         <div class="wordle-container" id="wordle">
             <div class="try" id="try_1">
@@ -55,6 +60,12 @@
                 <div class="word"></div>
             </div>
         </div>
+
+        <div class="alert noshow" id="bad">Add a 5 letter word</div>
+        <div class="alert noshow" id="badWord">Word not found</div>
+        <div class="alert orange noshow" id="loose">You loose</div>
+        <div class="alert green noshow" id="win">You win!</div>
+
     </section>
     <section class="keyboard-container" id="keyboard">
         <div class="col">
@@ -92,5 +103,6 @@
             <div class="key intro" id="intro">INTRO</div>
         </div>
     </section>
+    <div class="reset noshow" id="reset">RESET</div>
 </body>
 </html>

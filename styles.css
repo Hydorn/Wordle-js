@@ -5,40 +5,51 @@
 }
 html{
     font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    font-size: 2rem;
 }
 body {
     width: 100vw;
     height: 100vh;
-    background-color: #bbb;
+    background-color: #333;
     display: flex;
     flex-direction: column;
 }
 header{
    flex: 0.1; 
-   border-bottom: 1px solid gray;
+   border-bottom: 1px solid #eee;
 }
 .wordle{
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
+    position: relative;
 }
 .try{
     display: flex;
+    transition: 0.2s all ease-in;
 }
 .word{
     display: flex;
     justify-content: center;
     align-items:center;
     font-size: 4rem;
-    color: #666;
+    color: #888;
     width: 6rem;
     height: 6rem;
     margin: 1rem;
-    border: solid 2px gray;
+    border: solid 2px #eee;
+    transition: 0.2s all ease-in ;
 }
 .keyboard-container{
-    border-top: 1px solid gray;
+    border-top: 1px solid #eee;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -53,9 +64,10 @@ header{
 }
 .key{
     font-size: 1.5rem;
+    color: #eee;
     width: 5rem;
     height: 5rem;
-    border: 1px solid gray;
+    border: 1px solid #eee;
     border-radius: 3px;
     display: flex;
     justify-content: center;
@@ -67,16 +79,55 @@ header{
 .key:hover {
     opacity: 0.8;
     background-color: gray;
+    scale: 1.1;
+}
+.reset{
+    position: absolute;
+    width: 12rem;
+    height: 5rem;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    color: #eee;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 7rem;
+    left:50%;
+    transform: translate(-50%,0);
+    cursor: pointer;
+}
+.reset:hover{
+    opacity: 0.8;
+    background-color: gray;
+    scale: 1.1;
+}
+.alert{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: #666;
+    width: 22rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: solid 2px #eee;
+    color: #eee;
+    font-size: large;
+    position: absolute;
+    bottom: 1.5rem;
+    scale: 1;
+    opacity: 1;
+    transition: .3s all ease-in;
 }
 .intro{
     width:12rem;
 }
-.green {
-    background-color: green;
-    color: #fff;
-}
 .orange {
     background-color: orange;
+    color: #fff;
+}
+.green {
+    background-color: green;
     color: #fff;
 }
 .checked{
@@ -85,4 +136,25 @@ header{
 }
 .none{
     pointer-events: none;
+}
+.noshow{
+    scale: 0.1;
+    opacity: 0;
+}
+.focus{
+    scale: 1.05;
+    border: solid 3px #fff;
+}
+.animation-wrong{
+    animation: wrong 0.2s ease-in;
+}
+.display-try{
+    transform: rotateX(360deg);
+}
+@keyframes wrong {
+    0% {transform: translateX(-1rem);}
+
+    50%{transform: translateX(1rem);}
+
+    100%{transform: translateX(-1rem);}
 }
